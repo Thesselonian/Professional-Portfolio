@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './components/Nav/index';
+import Body from './components/Body/index';
+import Footer from './components/Footer/index';
 import './App.css';
 
 function App() {
+
+  const [navigationItems] = useState([
+    'About Me',
+    'Portfolio',
+    'Contact',
+    'Resume'
+  ])
+  const [currentNavigationItem, setCurrentNavigationItem] = useState(navigationItems[0]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar 
+        navigationItems={navigationItems}
+        currentNavigationItem={currentNavigationItem}
+        setCurrentNavigationItem={setCurrentNavigationItem}
+        />
+      <Body />
+      <Footer />
+    </>
   );
 }
 
