@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+// import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 
 function NavigationBar(props) {
     const {
@@ -32,6 +32,11 @@ function NavigationBar(props) {
                             </span>
                         </li>
                     ))}
+                    <li className='mx-2 header-item'>
+                        <a href="Resume.pdf" target="_blank">
+                            <span>Resume</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>

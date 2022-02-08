@@ -8,22 +8,21 @@ function App() {
 
   const [navigationItems] = useState([
     'About Me',
-    'Portfolio',
-    'Contact',
-    'Resume'
+    'Projects',
+    'Contact'
   ])
   const [currentNavigationItem, setCurrentNavigationItem] = useState(navigationItems[0]);
 
   return (
-    <>
+    <div id="page-container">
       <Navbar 
         navigationItems={navigationItems}
         currentNavigationItem={currentNavigationItem}
         setCurrentNavigationItem={setCurrentNavigationItem}
         />
-      <Body />
+      <Body currentNavigationItem={currentNavigationItem} />
       <Footer />
-    </>
+    </div>
   );
 }
 
