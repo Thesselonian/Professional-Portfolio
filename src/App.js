@@ -9,7 +9,8 @@ function App() {
   const [navigationItems] = useState([
     'About Me',
     'Projects',
-    'Contact'
+    'Contact',
+    'Resume'
   ])
   const [currentNavigationItem, setCurrentNavigationItem] = useState(navigationItems[0]);
 

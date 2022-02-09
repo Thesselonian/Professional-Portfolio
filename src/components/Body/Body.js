@@ -2,6 +2,7 @@ import React from 'react';
 import About from '../About/index';
 import Contact from '../Contact/index';
 import Projects from '../Projects/index';
+import Resume from '../Resume/index';
 
 function Body(props) {
     const { currentNavigationItem } = props
@@ -9,7 +10,7 @@ function Body(props) {
         <main>
             { currentNavigationItem === 'About Me' && <About /> }
             { currentNavigationItem === 'Contact' && <Contact /> }
-            {/* { currentNavigationItem === 'Resume' && <Resume /> } */}
+            { currentNavigationItem === 'Resume' && <Resume /> }
             { currentNavigationItem === 'Projects' && <Projects /> }      
         </main>
     )
