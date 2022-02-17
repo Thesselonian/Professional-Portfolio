@@ -1,29 +1,23 @@
-import React, { useState } from 'react';
-import Navbar from './components/Nav/index';
-import Body from './components/Body/index';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NavigationBar from './components/Nav/Navbar';
+import Contact from './components/Contact'
+// import Body from './components/Body/index';
+import About from './components/About'
 import Footer from './components/Footer/index';
 import './App.css';
 
 function App() {
-
-  const [navigationItems] = useState([
-    'About Me',
-    'Projects',
-    'Contact',
-    'Resume'
-  ])
-  const [currentNavigationItem, setCurrentNavigationItem] = useState(navigationItems[0]);
-
   return (
-    <div id="page-container">
-      <Navbar 
-        navigationItems={navigationItems}
-        currentNavigationItem={currentNavigationItem}
-        setCurrentNavigationItem={setCurrentNavigationItem}
-        />
-      <Body currentNavigationItem={currentNavigationItem} />
-      <Footer />
-    </div>
+    <Router>
+        <NavigationBar />
+        <Switch>
+          <Route exact path="/contact" render={() => <Contact />} />
+          <Route exact path="/about" render={() => <About />} />
+        {/* <Body currentNavigationItem={currentNavigationItem} /> */}
+        </Switch>
+        <Footer />
+    </Router>
   );
 }
 

@@ -1,12 +1,24 @@
 import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 function About (props) {
 
     return (
-        <section id="contact-list">
-            <p>My Name is Eric and I like web developing</p>
-            <img src="/assets/images/eric.jpg" alt="Eric on a mountain" width="550" height="320"></img>
-        </section>
+        <Container className="body">
+            <Row>
+                <Col> 
+                    <img src="/assets/images/eric.jpg" alt="Eric on a mountain" width="550" height="320"></img>
+                </Col>
+                <Col>
+                    <Card className="about-card">
+                        <Card.Header>About Me</Card.Header>
+                        <Card.Text>
+                            My name is Eric and I like web developing
+                        </Card.Text>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

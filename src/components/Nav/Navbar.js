@@ -1,39 +1,23 @@
-import React, { useState } from 'react';
-import { capitalizeFirstLetter } from "../../utils/helpers.js";
+import React from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 function NavigationBar(props) {
-    const {
-        navigationItems = [],
-        currentNavigationItem,
-        setCurrentNavigationItem
-    } = props
 
     return (
-        <header className="flex-row px-1">
-            <h2>
-                <a data-testid="link" href="/">
-                    <span role="img" aria-label="camera">
-                        {" "}
-                    </span>{" "}
-                    Eric
-                </a>
-            </h2>
-            <nav>
-                <ul className="flex-row">
-                    {navigationItems.map((navigationItem) => (
-                        <li className={`mx-2 header-item ${navigationItem === currentNavigationItem && 'navActive'}`} key={navigationItem}>
-                            <span
-                                onClick={() => {
-                                    setCurrentNavigationItem(navigationItem)
-                                }}
-                            >
-                                {capitalizeFirstLetter(navigationItem)}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </header>
+        <>
+            <Navbar bg="light" expand="lg">
+            <Container>
+                <Navbar.Brand href="#home">Eric Young</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
+                </Nav>
+                </Navbar.Collapse>
+            </Container>
+            </Navbar>
+        </>
     )
 }
 

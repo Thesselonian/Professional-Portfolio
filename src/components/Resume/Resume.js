@@ -23,8 +23,10 @@ function Resume (props) {
                 <li class="proficiency-item">
                     MongoDB
                 </li>
+                <li class="proficiency-item">
+                    GraphQL
+                </li>
             </ul>
-            {/* <a href="/assets/resume.pdf" width="800px" height="2100px" /> */}
             <embed
                 src="/assets/eric-young-resume-web-development.pdf" 
                 width = "800px"
