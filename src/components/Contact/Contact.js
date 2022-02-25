@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import { Form } from 'react-bootstrap'
 import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
     const { name, email, message } = formState;
     const [errorMessage, setErrorMessage] = useState('');
+    console.log(formState)
 
     function handleChange(e) {
-        if (e.target.name === 'email') {
+
+        if (e.target.id === 'email') {
             const isValid = validateEmail(e.target.value);
             if (!isValid) {
                 setErrorMessage('Your email is invalid.');
@@ -16,13 +19,13 @@ function ContactForm() {
             }
         } else {
             if(!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`)
+                setErrorMessage(`${e.target.id} is required.`)
             } else {
                 setErrorMessage('');
             }
         }
         if(!errorMessage) {
-            setFormState({...formState, [e.target.name]: e.target.value })
+            setFormState({...formState, [e.target.id]: e.target.value })
         }
     }
 
@@ -34,26 +37,24 @@ function ContactForm() {
     return ( 
         <section>
             <h1>Contact me</h1>
-            <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
-                </div>
-                <div>
-                    <label htmlFor="email">Email address:</label>
-                    <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-                </div>
-                <div>
-                    <label htmlFor="message">message:</label>
-                    <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-                    {errorMessage && (
-                        <div>
-                            <p className="error-text">{errorMessage}</p>
-                        </div>
-                    )}
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            <Form id="contact-form" className="form" onSubmit={handleSubmit} onChange={handleChange}>
+                <Form.Group>
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control className="form-input" id="name" type="name" placeholder="Enter your name" />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control className="form-input" id="email" type="email" placeholder="Enter your email" />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control className="form-input" id="message" type="message" placeholder="Send me a message" />
+                </Form.Group>
+                {errorMessage && <div>{errorMessage}</div>}
+                <button variant="primary" type="submit">
+                    Submit
+                </button>
+            </Form>
         </section>
     )
 }

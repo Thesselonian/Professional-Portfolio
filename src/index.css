@@ -85,3 +85,14 @@ footer {
   min-height: 95%;
 }
 
+/* Form */
+
+.form-input {
+  width: 15rem;
+}
+
+.form {
+  align-items: center;
+  justify-content: center;
+}
+
