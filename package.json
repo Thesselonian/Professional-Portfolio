@@ -1,7 +1,7 @@
 {
   "name": "reactboilerplate",
   "version": "0.1.0",
-  "homepage": "https://Thesselonian/github.io/professional-portfolio",
+  "homepage": "https://thesselonian.github.io/professional-portfolio",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
