@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap'
 import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
-    const [formState, setFormState] = useState({ name: '', email: '', message: ''});
+    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const { name, email, message } = formState;
     const [errorMessage, setErrorMessage] = useState('');
     console.log(formState)
@@ -18,14 +18,14 @@ function ContactForm() {
                 setErrorMessage('');
             }
         } else {
-            if(!e.target.value.length) {
+            if (!e.target.value.length) {
                 setErrorMessage(`${e.target.id} is required.`)
             } else {
                 setErrorMessage('');
             }
         }
-        if(!errorMessage) {
-            setFormState({...formState, [e.target.id]: e.target.value })
+        if (!errorMessage) {
+            setFormState({ ...formState, [e.target.id]: e.target.value })
         }
     }
 
@@ -34,7 +34,7 @@ function ContactForm() {
         console.log(formState);
     }
 
-    return ( 
+    return (
         <section>
             <h1>Contact me</h1>
             <Form id="contact-form" className="form" onSubmit={handleSubmit} onChange={handleChange}>
@@ -55,6 +55,32 @@ function ContactForm() {
                     Submit
                 </button>
             </Form>
+            <div>
+                 <p>
+                     If you prefer, contact me through the following means:
+                 </p>
+                 <ul id="contact-list">
+                     <li>
+                         <a href="mailto:ericyoung111@gmail.com">
+                             email: Ericyoung111@gmail.com
+                         </a>
+                     </li>
+                     <br></br>
+                     <li>
+                         <a href="https:github.com/Thesselonian">
+                             <i className="fab fa-linkedin"></i>
+                             <span> Linkedin: https://www.linkedin.com/in/ericyoung111/</span>
+                         </a>
+                     </li>
+                     <br></br>
+                     <li>
+                         <a href="https:github.com/Thesselonian">
+                             <i className="fab fa-github"></i>
+                             <span> GitHub: https://github.com/Thesselonian</span>
+                         </a>
+                     </li>
+                 </ul>
+             </div>
         </section>
     )
 }
@@ -89,7 +115,6 @@ export default ContactForm;
 //                         </a>
 //                     </li>
 //                 </ul>
-
 //             </div>
 //         </section>
 //     )

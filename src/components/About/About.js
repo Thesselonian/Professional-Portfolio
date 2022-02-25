@@ -17,7 +17,8 @@ function About () {
                             </h2>
                         </Card.Header>
                         <Card.Text>
-                            I love writing clean, performant code that is easy to read.
+                            I love writing clean, performant code that is easy to read and creates a fantastic
+                            user experience.
                             When I am not designing awesome web applications I like to run with my dog,
                             cook tasty food, play Apex Legends, read novels and go for hikes
                             with my girlfriend. 
