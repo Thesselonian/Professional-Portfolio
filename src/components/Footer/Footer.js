@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(props) {
     return(
-        <footer>
+        <footer className="footer">
             <a href="https://github.com/Thesselonian">
                 <i className="fab fa-github"></i>
                 <span> GitHub</span>

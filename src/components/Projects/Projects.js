@@ -9,8 +9,7 @@ function Projects() {
             <section className="project-section">
                 {/* Map through projects, creating card for each */}
                 {projects.map((project) => {
-                    // <div>this is my project</div>
-                    return <ProjectCard project={project} />
+                    return <ProjectCard project={project} key={project.name}/>
                 })}
             </section>
         </Container>

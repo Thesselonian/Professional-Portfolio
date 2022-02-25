@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 
 const ProjectCard = ({ project }) => {
-    console.log(project)
     return (
         <Col lg={4}>
             <div className="project-div">
