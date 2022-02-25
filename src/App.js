@@ -1,23 +1,36 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavigationBar from './components/Nav/Navbar';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar/Navbar';
 import Contact from './components/Contact'
-// import Body from './components/Body/index';
 import About from './components/About'
+import Projects from './components/Projects';
 import Footer from './components/Footer/index';
+import Resume from './components/Resume';
 import './App.css';
 
 function App() {
+
+  const [navigationCategory] = useState([
+    'Projects',
+    'Resume',
+    'Contact',
+    'About'
+  ])
+
+  const [selectedCategory, setSelectedCategory] = useState('About');
+
   return (
-    <Router>
-        <NavigationBar />
-        <Switch>
-          <Route exact path="/contact" render={() => <Contact />} />
-          <Route exact path="/about" render={() => <About />} />
-        {/* <Body currentNavigationItem={currentNavigationItem} /> */}
-        </Switch>
-        <Footer />
-    </Router>
+    <>
+      <Navbar
+        navigationCategory={navigationCategory}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      {selectedCategory === 'About' && <About />}
+      {selectedCategory === 'Projects' && <Projects />}
+      {selectedCategory === 'Resume' && <Resume />}
+      {selectedCategory === 'Contact' && <Contact />}
+      <Footer />
+    </>
   );
 }
 

@@ -1,31 +1,24 @@
 import React from 'react';
 
-function Resume (props) {
+function Resume () {
+
+    const proficiencies = [
+        'Javascript', 
+        'React', 
+        'Express',
+        'MySQL',
+        'MongoDB',
+        'GraphQL'
+    ]
+
     return (
         <section>
             <h2>Proficiencies</h2>
-            <ul class="proficiency-list">
-                <li class="proficiency-item">
-                    Javascript
-                </li>
-                <li class="proficiency-item">
-                    React
-                </li>
-                <li class="proficiency-item">
-                    React
-                </li>
-                <li class="proficiency-item">
-                    Express
-                </li>
-                <li class="proficiency-item">
-                    Mysql
-                </li>
-                <li class="proficiency-item">
-                    MongoDB
-                </li>
-                <li class="proficiency-item">
-                    GraphQL
-                </li>
+            <ul className="proficiency-list" >
+                {proficiencies.map((proficiency) => (
+                    <li className="proficiency-item" key={proficiency}>{proficiency}</li>
+                    ))
+                }
             </ul>
             <embed
                 src="/assets/eric-young-resume-web-development.pdf" 

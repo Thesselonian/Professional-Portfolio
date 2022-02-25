@@ -261,7 +261,7 @@ a {
   flex-direction: column;
   padding: 10px;
   align-items: center;
-  height: 22rem;
+  /* height: 22rem; */
   justify-content: center;
 }
 
@@ -278,7 +278,7 @@ a {
 
 .project-h2 {
   text-align: center;
-  height: 10rem;
+  /* height: 10rem; */
   display: inline-flex;
   align-items: center;
 }
