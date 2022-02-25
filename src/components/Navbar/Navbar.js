@@ -20,7 +20,6 @@ function NavigationBar({ navigationCategory, selectedCategory, setSelectedCatego
                     <Nav.Link onClick={handleNavigation}>Projects</Nav.Link>
                     <Nav.Link onClick={handleNavigation}>Resume</Nav.Link>
                     <Nav.Link onClick={handleNavigation}>Contact</Nav.Link>
-                    {/* <Nav.Link href="/contact">Contact</Nav.Link> */}
                 </Nav>
                 </Navbar.Collapse>
             </Container>
