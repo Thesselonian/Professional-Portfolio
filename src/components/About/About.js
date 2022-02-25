@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-function About (props) {
+function About () {
 
     return (
         <Container className="body">
@@ -10,10 +10,17 @@ function About (props) {
                     <img src="/assets/images/eric.jpg" alt="Eric on a mountain" width="550" height="320"></img>
                 </Col>
                 <Col>
-                    <Card className="about-card">
-                        <Card.Header>About Me</Card.Header>
+                    <Card className="about-card text-center">
+                        <Card.Header>
+                            <h2>
+                                About Me
+                            </h2>
+                        </Card.Header>
                         <Card.Text>
-                            My name is Eric and I like web developing
+                            I love writing clean, performant code that is easy to read.
+                            When I am not designing awesome web applications I like to run with my dog,
+                            cook tasty food, play Apex Legends, read novels and go for hikes
+                            with my girlfriend. 
                         </Card.Text>
                     </Card>
                 </Col>
