@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import ericImage from '../../assets/images/eric.jpg'
 
 function About () {
 
@@ -7,7 +8,7 @@ function About () {
         <Container className="body">
             <Row>
                 <Col> 
-                    <img src="/assets/images/eric.jpg" alt="Eric on a mountain" width="550" height="320"></img>
+                    <img src={ericImage} alt="Eric on a mountain" width="550" height="320"></img>
                 </Col>
                 <Col>
                     <Card className="about-card text-center">

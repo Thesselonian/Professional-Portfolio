@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from'../../assets/eric-young-resume-web-development.pdf'
 
 function Resume () {
 
@@ -21,7 +22,7 @@ function Resume () {
                 }
             </ul>
             <embed
-                src="/assets/eric-young-resume-web-development.pdf" 
+                src={resume} 
                 width = "800px"
                 height = "2100px"
             />

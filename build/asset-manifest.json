@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/github.io/professional-portfolio/static/css/main.992abb90.css",
-    "main.js": "/github.io/professional-portfolio/static/js/main.2f1a8900.js",
-    "index.html": "/github.io/professional-portfolio/index.html",
-    "main.992abb90.css.map": "/github.io/professional-portfolio/static/css/main.992abb90.css.map",
-    "main.2f1a8900.js.map": "/github.io/professional-portfolio/static/js/main.2f1a8900.js.map"
+    "main.css": "/professional-portfolio/static/css/main.992abb90.css",
+    "main.js": "/professional-portfolio/static/js/main.6ad31fc5.js",
+    "static/media/eric.jpg": "/professional-portfolio/static/media/eric.122758064273597a7777.jpg",
+    "static/media/ski-haus.jpg": "/professional-portfolio/static/media/ski-haus.09f9d25401647fbea882.jpg",
+    "static/media/deep-thoughts.jpg": "/professional-portfolio/static/media/deep-thoughts.4f8d84dac278b6b41f19.jpg",
+    "static/media/budget-tracker.jpg": "/professional-portfolio/static/media/budget-tracker.9f86bb40ace1c33e4827.jpg",
+    "static/media/eric-young-resume-web-development.pdf": "/professional-portfolio/static/media/eric-young-resume-web-development.8eecdebab49056bd1a7a.pdf",
+    "static/media/pawgers.jpg": "/professional-portfolio/static/media/pawgers.6e24ebac9bcb5479e042.jpg",
+    "index.html": "/professional-portfolio/index.html",
+    "main.992abb90.css.map": "/professional-portfolio/static/css/main.992abb90.css.map",
+    "main.6ad31fc5.js.map": "/professional-portfolio/static/js/main.6ad31fc5.js.map"
   },
   "entrypoints": [
     "static/css/main.992abb90.css",
-    "static/js/main.2f1a8900.js"
+    "static/js/main.6ad31fc5.js"
   ]
 }
