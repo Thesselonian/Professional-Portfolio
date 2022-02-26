@@ -1,6 +1,6 @@
 html {
   position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -13,7 +13,11 @@ body {
   background: #1f1f20;
   color: #EDF5E1;
   font-family: 'fGeorgia', 'cursive';
-  min-height: 100%;
+  height: 100%;
+}
+
+embed {
+  height: 68rem;
 }
 
 /* Styles for project section  */
@@ -67,8 +71,13 @@ body {
 
 /* Footer */
 
-footer {
-  position: absolute;
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+.footer {
+  position: relative;
   bottom:0;
   width: 100%;
   height: 2.5rem;
